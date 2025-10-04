@@ -16,7 +16,10 @@
 
 ---
 
-## Demo
+## Demo / Live Preview
+
+You can check the project live here:  
+[Live Demo](https://yourusername.github.io/dictionary-with-songs/)  
 
 Type a word (e.g., `love`, `happy`) in the search box and press **Enter**.  
 - Dictionary meaning will appear  
