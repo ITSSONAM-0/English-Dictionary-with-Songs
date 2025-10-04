@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="dictionary.png">
+  <title>English Dictionary with Songs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="head">
+      <img class="logo" src="dictionary.png" alt="Dictionary Logo">
+      <h1 class="heading">English Dictionary</h1>
+    </div>
+
+    <!-- Search Box -->
+    <input type="text" placeholder="Search a word" class="input" id="input">
+    <p class="info-text" id="info-text">Type a word and press enter</p>
+
+    <!-- Meaning Container -->
+    <div class="meaning-container" id="meaning-container">
+      <p><strong>Word:</strong> <span class="title" id="title">____</span></p>
+      <p><strong>Meaning 1:</strong> <span class="meaning" id="meaning">____</span></p>
+      <p><strong>Meaning 2:</strong> <span class="meaning" id="meaning2">____</span></p>
+      <audio src="" controls id="audio"></audio>
+
+      <!-- YouTube Song Player -->
+      <h3>Related Song</h3>
+      <iframe id="songFrame" width="300" height="200" frameborder="0" allow="autoplay"></iframe>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
