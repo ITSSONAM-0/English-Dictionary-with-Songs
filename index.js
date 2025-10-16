@@ -7,7 +7,7 @@ const meaningEL2 = document.getElementById("meaning2");
 const audioEl = document.getElementById("audio");
 const songFrame = document.getElementById("songFrame");
 
-// ✅ Dictionary API function
+
 async function fetchAPI(word) {
   try {
     infoText.style.display = "block";
@@ -18,7 +18,6 @@ async function fetchAPI(word) {
     const response = await fetch(url);
     const result = await response.json();
 
-    // Word not found
     if (result.title) {
       infoText.style.display = "none";
       meaningCo.style.display = "block";
@@ -30,7 +29,7 @@ async function fetchAPI(word) {
       return;
     }
 
-    // ✅ Word found
+ 
     infoText.style.display = "none";
     meaningCo.style.display = "block";
 
@@ -38,7 +37,7 @@ async function fetchAPI(word) {
     meaningEL.innerText = result[0].meanings[0]?.definitions[0]?.definition || "N/A";
     meaningEL2.innerText = result[0].meanings[1]?.definitions[0]?.definition || "N/A";
 
-    // Pronunciation audio
+   
     const phonetic = result[0].phonetics.find(p => p.audio);
     if (phonetic && phonetic.audio) {
       audioEl.style.display = "block";
@@ -47,7 +46,6 @@ async function fetchAPI(word) {
       audioEl.style.display = "none";
     }
 
-    // ✅ Fetch related song from YouTube
     await fetchSongFromYouTube(word);
 
   } catch (error) {
@@ -56,7 +54,6 @@ async function fetchAPI(word) {
   }
 }
 
-// ✅ YouTube API function
 async function fetchSongFromYouTube(word) {
   const apiKey = "AIzaSyDnT2pWMFkgV92YrNyen3uPI1i3Ms9oS9c"; // <-- apna YouTube API key daalna hai
   const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${word}+song&type=video&maxResults=1&key=${apiKey}`;
@@ -78,7 +75,7 @@ async function fetchSongFromYouTube(word) {
   }
 }
 
-// ✅ Enter key listener
+
 inputEL.addEventListener("keyup", (e) => {
   if (e.target.value && e.key === "Enter") {
     fetchAPI(e.target.value);
