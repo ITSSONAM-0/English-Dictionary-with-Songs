@@ -27,8 +27,3 @@ Type a word (e.g., `love`, `happy`) in the search box and press **Enter**.
 
 ---
 
-## Installation & Setup
-
-1. **Clone the repository** or download the project folder:
-   ```bash
-   git clone <your-repo-link>
